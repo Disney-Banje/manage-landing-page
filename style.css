@@ -24,6 +24,7 @@ button {
     border: none;
     outline: none;
     font-weight: 700;
+    cursor: pointer;
 }
 
 img {
@@ -34,6 +35,11 @@ input {
     border: none;
     outline: none;
     background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+    border: none;
 }
 
 :root {
@@ -48,6 +54,7 @@ input {
 
 
 body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.6rem;
     line-height: 1.2;
     font-weight: 400;
@@ -60,327 +67,272 @@ body {
     overflow: hidden;
 }
 
+.bg-tablet-pattern {
+    position: absolute;
+    top: -4.0rem;
+    right: -6.0rem;
+    z-index: -100;
+}
+
+header {
+    padding: 2.4rem ;
+}
+
 .content-wrapper {
-    max-width: 1024px;
+    max-width: 85.0rem;
     margin: auto;
 }
 
-.first-bg,
-.second-bg {
-    position: absolute;
-    z-index: -200;
-}
-
-.first-bg {
-    top: -19.5rem;
-    right: -18.5rem;
-    width: 50.5rem;
-}
-
-.second-bg {
-    top: 30.8rem;
-    right: -30.5rem;
-    width: 40.5rem;
-}
-
-
 nav {
-    margin: 2.2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.page-links,
+.page-links {
+    display: none;
+}
+
 nav .cta {
     display: none;
 }
 
 .hero-page {
-    margin: 2.2rem;
+    padding: 2.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.hero--details {
     text-align: center;
+    align-self: center;
 }
 
-h1 {
+.hero--title {
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
 }
 
-.hero-page p {
+.hero--description {
     color: var(--Dark-Grayish-Blue);
-    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 2.2rem;
 }
 
 .cta {
-    padding: 1.0rem 2.0rem;
-    border-radius: 1.8rem;
-}
-
-.hero-page .cta {
-    box-shadow: 0 0.5rem 0 var(--Very-Pale-Red);
+    padding: 1.2rem 2.4rem;
+    border-radius: 2.5rem;
 }
 
 .cta-orange {
+    font-size: 1.7rem;
     background-color: var(--Bright-Red);
     color: var(--Very-Light-Gray);
 }
 
-
-
-
-
-.about-services {
-    margin: 5.8rem 0;
-}
-
-
-.about-heading {
+.testimonials-wrapper {
+    margin: 8.8rem 1.6rem 5.5rem;
     text-align: center;
-    margin: 2.2rem;
 }
+
+.testimonials-wrapper h2 {
+    margin-bottom: 6.5rem;
+}
+
+.testimony-card {
+    position: relative;
+    background-color: var(--Very-Light-Gray);
+    padding: 4.2rem 2.2rem;
+}
+
+.client-avatar {
+    width: 7.5rem;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.client-name {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 1.9rem;
+    margin-bottom: 2.0rem;
+}
+
+.client-testimony {
+    line-height: 1.5;
+    color: var(--Dark-Grayish-Blue);
+}
+
+
+
+
+
 
 h2 {
-    font-size: 3.0rem;
-    margin-bottom: 1.6rem;
+    margin: 2.2rem auto;
     text-align: center;
+    font-size: 3.0rem;
+}
+
+.about-services {
+    position: relative;
+}
+
+.bg-about-pattern {
+    position: absolute;
+    top: -35.0rem;
+    right: -22.0rem;
+    z-index: -100;
+}
+
+.about--description {
+    color: var(--Dark-Grayish-Blue);
+    line-height: 1.5;
+    margin: auto 2.2rem;
 }
 
 .service-list {
-    margin-top: 2.8rem;
+    margin-top: 4.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3.0rem;
 }
 
 .card-banner {
     background-color: var(--Very-Pale-Red);
     display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-left: 1.6rem;
+    margin-bottom: 1.6rem;
     border-radius: 2.5rem 0 0 2.5rem;
-    margin-bottom: 1.2rem;
-}
-
-.card-number,
-.card-title {
-    padding: 1.0rem;
 }
 
 .card-number {
     background-color: var(--Bright-Red);
-    padding: 1.0rem 2.2rem;
-    border-radius: 2.5rem;
     color: var(--Very-Light-Gray);
-    font-weight: 700;
+    padding: 0.8rem 2.4rem;
+    border-radius: 2.5rem;
+    font-weight: 500;
 }
 
 .card-title {
     font-weight: 700;
-    color: var(--Dark-Blue);
-}
-
-.service-card {
-    margin-left: 2.2rem;
 }
 
 .desc {
     color: var(--Dark-Grayish-Blue);
-    margin-right: 2.2rem;
-}
-
-
-
-
-
-.testimonials-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5.8rem 2.2rem;
-}
-.testimony-list {
-    margin-top: 6.5rem;
-}
-
-.testimony-card {
-    background-color: var(--Very-Light-Gray);
-    padding: 2.2rem;
-    text-align: center;
-    position: relative;
-    max-width: 45.5rem;
-}
-
-.client-avatar {
-    width: 6.2rem;
-    position: absolute;
-    top: -3.2rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-.client-name {
-    margin: 3.8rem 0 1.5rem;
-    font-weight: 700;
-}
-
-.client-testimony {
-    color: var(--Dark-Grayish-Blue);
+    line-height: 1.5;
+    margin: auto 1.2rem;
 }
 
 .selection-list {
     display: flex;
-    gap: 0.3rem;
+    gap: 0.5rem;
     justify-content: center;
-    margin: 1.5rem 0 2.8rem;
+    align-items: center;
+    margin: 3.5rem auto 6.5rem;
+}
+
+.selection {
+    width: 1.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 0.05rem solid var(--Bright-Red);
 }
 
 .active {
     background-color: var(--Bright-Red);
 }
 
-.selection {
-    width: 1.45rem;
-    aspect-ratio: 1 / 1;
-    border: 0.2rem solid var(--Bright-Red);
-    border-radius: 50%;
-}
 
-.call-to-action_wrapper {
-    background-image: url('/images/bg-simplify-section-mobile.svg');
-    background-position: left center;
-    background-repeat: no-repeat;
+
+
+
+.content-action {
     background-color: var(--Bright-Red);
+    background-image: url('images/bg-simplify-section-mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
     color: var(--Very-Light-Gray);
     width: 100%;
-    height: 38.5rem;
+    height: 50.5rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .content {
-    margin: auto 2.2rem;
+    max-width: 80.0rem;
+}
+
+.content h2 {
+    font-size: 3.8rem;
+    line-height: 1.5;
+    margin: 2.2rem;
 }
 
 .cta-white {
     background-color: var(--Very-Light-Gray);
     color: var(--Bright-Red);
+    font-size: 1.7rem;
 }
 
+
+
+
+
 footer {
-    color: var(--Very-Light-Gray);
     background-color: #1e1e26;
-    padding: 4.8rem 2.2rem 2.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.0rem;
+    color: var(--Very-Light-Gray);
+    padding: 4.2rem 2.2rem 2.8rem;
+    text-align: center;
 }
 
 footer a {
-    color: var(--Dark-Grayish-Blue);
-}
-
-input {
-    background-color: var(--Very-Light-Gray);
-    padding: 1.0rem;
-    border-radius: 2.5rem;
+    color: var(--Very-Light-Gray);
 }
 
 form {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.0rem;
+    margin-bottom: 5.5rem;
 }
 
-input {
-    flex: 2;
+input[type='email'] {
+    background-color: var(--Very-Light-Gray);
+    padding: 1.2rem 2.4rem;
+    border-radius: 2.5rem;
+    display: inline-block;
+    flex: 1;
 }
 
 .page-sitemap {
-    padding: 0 4.2rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 3.0rem;
+    margin-bottom: 3.5rem;
+    text-align: start;
 }
 
 .page-sitemap ul {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2.0rem;
 }
 
-footer .logo-wrapper {
-    align-self: center;
-}
-
-footer p {
-    text-align: center;
+.copyright {
+    margin-top: 2.8rem;
+    font-size: 1.5rem;
     color: var(--Dark-Grayish-Blue);
-    margin-top: 2.2rem;
 }
-
-
-@media screen and (min-width: 768px) {
-    .page-links,
-    nav .cta {
-        display: block;
-    }
-
-    .dropdown-menu {
-        display: none;
-    }
-
-    nav {
-        align-items: center;
-    }
-
-    nav a {
-        color: var(--Dark-Blue);
-    }
-
-    .page-links {
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    .hero-page {
-        text-align: start;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4.8rem;
-        margin-top: 11.5rem;
-    }
-
-    .hero-page article {
-        grid-column: 1 ;
-        grid-row: 1;
-    }
-
-    .about-services {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .about-heading h2 {
-        text-align: start;
-    }
-
-    .about-heading {
-        text-align: start;
-    }
-
-    .card-banner {
-        background-color: transparent;
-    }
-
-    .desc {
-        margin-right: 0;
-        margin-left: 7.2rem;
-    }
-
-    .content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .content h2 {
-        width: 46%;
-        text-align: start;
-    }
-}
-
