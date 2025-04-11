@@ -29,6 +29,7 @@ button {
 
 img {
     max-width: 100%;
+    object-fit: cover;
 }
 
 input {
@@ -229,6 +230,7 @@ h2 {
 .desc {
     color: var(--Dark-Grayish-Blue);
     line-height: 1.5;
+    font-size: 1.5rem;
     margin: auto 1.2rem;
 }
 
@@ -263,7 +265,7 @@ h2 {
     background-position: left center;
     color: var(--Very-Light-Gray);
     width: 100%;
-    height: 50.5rem;
+    height: 32.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -331,6 +333,13 @@ input[type='email'] {
     gap: 2.0rem;
 }
 
+.social-handlers {
+    display: flex;
+    gap: 2.2rem;
+    justify-content: center;
+    margin-top: 2.8rem;
+}
+
 .copyright {
     margin-top: 2.8rem;
     font-size: 1.5rem;
@@ -351,6 +360,7 @@ input[type='email'] {
     }
 
     .page-links a {
+        font-size: 1.5rem;
         color: var(--Dark-Blue);
         font-weight: 500;
     }
@@ -363,11 +373,24 @@ input[type='email'] {
         display: none;
     }
 
+    .bg-tablet-pattern {
+        top: -5.5rem;
+        right: -16.5rem;
+        width: 50.8rem;
+    }
+
+    .bg-about-pattern {
+        width: 50.8rem;
+        left: -30.5rem;
+        top: 55.5rem;
+    }
+
 
 
 
 
     .hero-page {
+        margin-top: 6.5rem;
         grid-template-columns: 1fr 1fr ;
         grid-template-rows: 1fr;
     }
@@ -384,8 +407,8 @@ input[type='email'] {
 
     .about-services{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 2.2rem;
+        grid-template-columns: 1fr 1.2fr;
+        margin: 12.5rem 2.2rem;
     }
   
     .about--title,
@@ -411,7 +434,7 @@ input[type='email'] {
     }
 
     .desc {
-        margin-left: 8.8rem;
+        margin-left: 9.0rem;
         margin-right: 0;
     }
 
@@ -448,7 +471,7 @@ input[type='email'] {
 
 
     .content-action {
-        height: 31.5rem;
+        height: 25.5rem;
         background-image: url('images/bg-simplify-section-desktop.svg');
         background-size: cover;
         background-position: center;
@@ -468,6 +491,111 @@ input[type='email'] {
         margin: 0;
         line-height: 1.2;
     }
+
+
+
+
+
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr;
+        grid-template-areas: 
+            "L S S F"
+            "M S S C"
+            ". S S .";
+        column-gap: 2.6rem;
+    }
+
+    form {
+        grid-area: F;
+    }
+
+    .page-sitemap {
+        grid-area: S;
+        margin: 0;
+    }
+
+    footer .logo-wrapper {
+        grid-area: L;
+    }
+
+    .social-handlers {
+        grid-area: M;
+        margin-top: 0;
+    }
+
+    .copyright {
+        grid-area: C;
+        align-self: sstart;
+        margin: 0;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .hero-page {
+        gap: 5.5rem;
+    }
+
+    .hero-title {
+        line-height: 1.5;
+    }
+
+    .hero--details {
+        margin-right: 6.8rem;
+    }
+
+    .bg-tablet-pattern {
+        top: -5.5rem;
+        right: -10.5rem;
+        width: 50.8rem;
+    }
+
+    .bg-about-pattern {
+        width: 50.8rem;
+        left: -30.5rem;
+        top: 60.5rem;
+    }
+
+
+
+
+
+    .about-heading {
+        margin-right: 8.5rem;
+    }
+
+
+
+
+
+    .page-sitemap {
+        margin: 0 5.5rem;
+    }
+
+    .hero--description {
+        margin: 3.2rem 0;
+    }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+
+    .bg-tablet-pattern {
+        top: -16.5rem;
+        right: -5.5rem;
+        width: 70.8rem;
+    }
+
+    .bg-about-pattern {
+        width: 70.8rem;
+        left: -65.5rem;
+        top: 30.5rem;
+    }
+
 }
 
 
