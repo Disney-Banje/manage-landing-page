@@ -79,7 +79,7 @@ header {
 }
 
 .content-wrapper {
-    max-width: 85.0rem;
+    max-width: 100.0rem;
     margin: auto;
 }
 
@@ -194,7 +194,7 @@ h2 {
 .about--description {
     color: var(--Dark-Grayish-Blue);
     line-height: 1.5;
-    margin: auto 2.2rem;
+    margin: 2.2rem;
 }
 
 .service-list {
@@ -336,3 +336,139 @@ input[type='email'] {
     font-size: 1.5rem;
     color: var(--Dark-Grayish-Blue);
 }
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .page-links {
+        display: flex;
+        gap: 2.0rem;
+    }
+
+    .page-links a {
+        color: var(--Dark-Blue);
+        font-weight: 500;
+    }
+
+    nav .cta {
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+
+
+
+
+    .hero-page {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr;
+    }
+
+    .hero--details {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+
+
+
+
+
+    .about-services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 2.2rem;
+    }
+  
+    .about--title,
+    .about--description {
+        text-align: left;
+    }
+
+    .about--title {
+        margin: 0;
+    }
+
+    .about--description {
+        margin: 2.2rem 0;
+    }
+
+    .service-list {
+        margin-top: 0;
+    }
+
+    .card-banner {
+        background-color: transparent;
+        gap: 1.0rem;
+    }
+
+    .desc {
+        margin-left: 8.8rem;
+        margin-right: 0;
+    }
+
+
+
+
+
+
+    .testimony-list {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.0rem;
+        align-items: center;
+        padding: 5.2rem 0 0 2.2rem;
+    }
+
+    .testimony-card {
+        min-width: 42.0rem;
+        min-height: 23.9rem;
+    }
+
+    .selection-list {
+        display: none;
+    }
+
+    .testimonials-wrapper button {
+        margin-top: 5.5rem;
+    }
+
+
+
+
+
+    .content-action {
+        height: 31.5rem;
+        background-image: url('images/bg-simplify-section-desktop.svg');
+        background-size: cover;
+        background-position: center;
+        padding: 2.2rem;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100.0rem;
+    }
+
+    .content h2 {
+        width: 52%;
+        text-align: left;
+        margin: 0;
+        line-height: 1.2;
+    }
+}
+
+
+
